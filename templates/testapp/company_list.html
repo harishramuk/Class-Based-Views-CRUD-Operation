@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+      {% block body_block %}
+      <div align="center">
+        <h1>List Of All Companies</h1><hr>
+      </div>
+       {% for comp in company_list %}
+         <h2> <a href="/{{comp.id}}">{{comp.Name}}</a> </h2>
+         {%endfor%}
+         <div align="center">
+           <a href="/create" class='btn btn-lg btn-success'>Add a New Company</a>
+         </div>
+
+
+
+      {%endblock%}
